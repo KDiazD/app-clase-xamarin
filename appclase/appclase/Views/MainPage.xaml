@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="appclase.MainPage">
+
+    <!-- Login-->
+    <Grid> 
+        <Image Source="fondo_login.jpg" Aspect="AspectFill"/>
+        <BoxView Color="Black" Opacity="0.7"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="220" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" Padding="30,20">
+
+                <Label Text="Bienvenidos a Lukar-Store"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                />
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="1" Padding="30,20">
+
+                <Image
+                    Source="icon.png"
+                    HeightRequest="50"
+                    WidthRequest="50" 
+                />
+                
+                <Entry
+                    Placeholder="Usuario"
+                    x:Name="user"
+                    PlaceholderColor="White"
+                    Keyboard="Default"
+                />
+                
+                <Entry
+                    Placeholder="Contraseña"
+                    x:Name="pass"
+                    PlaceholderColor="White"
+                    Keyboard="Default"
+                    
+                />
+
+                <Button
+                    Text="Entrar"
+                    x:Name="entrar"
+                    Clicked="entrar_Clicked"
+                    BorderColor="White"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    BorderWidth="2"
+                    CornerRadius="9"
+                />
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

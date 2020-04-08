@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using appclase.Views;
 
 namespace appclase
 {
@@ -16,6 +17,12 @@ namespace appclase
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void entrar_Clicked(object sender, EventArgs e)
+        {
+            
+            await Navigation.PushAsync(new Home());
         }
     }
 }

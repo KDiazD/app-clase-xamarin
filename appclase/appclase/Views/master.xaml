@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="appclase.Views.master"
+             Title="Master">
+    <ContentPage.Content>
+        <Grid RowSpacing="2.5">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" BackgroundColor="#51081B" Padding="30,20">
+        
+                <Label Text="Menú"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       
+                />
+
+            </StackLayout>
+
+            <Grid Grid.Row="1" RowSpacing="0.5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="1"  BackgroundColor="Black">
+
+                    <Button
+                    Text="Productos"
+                    x:Name="productos"
+                    Clicked="productos_Clicked"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                />
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" BackgroundColor="Black">
+
+                    <Button
+                    Text="Usuarios"
+                    x:Name="usuarios"
+                    Clicked="usuarios_Clicked"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                />
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" BackgroundColor="Black">
+
+                    <Button
+                    Text="Pedidos"
+                    x:Name="pedidos"
+                    Clicked="pedidos_Clicked"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                />
+                </StackLayout>
+                <StackLayout Grid.Row="4" BackgroundColor="Black">
+                    
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             mc:Ignorable="d"
+             x:Class="appclase.Views.listar_usuarios_admin"
+             Title="Usuarios">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Crear un usuario" TextColor="White" BackgroundColor="#20BB82" Clicked="Button_Clicked"/>
+
+            <CollectionView x:Name="Listado_usuarios_admin" BackgroundColor="Black">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="1">
+                    </GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Frame
+                                HasShadow="True"
+                               HorizontalOptions="StartAndExpand"
+                               Margin="15,5"
+                               HeightRequest="50"
+                               WidthRequest="350"
+                               Padding="10"
+                               IsClippedToBounds="True">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Text="Nombre"
+                                        FontAttributes="Bold"
+                                        FontSize="12"
+                                        HorizontalTextAlignment="Center"
+                                    />
+                                    
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Text="{Binding nombre}"
+                                        HorizontalTextAlignment="Center"                                        
+                                    />
+                                    
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Text="Apellido"
+                                        FontSize="12"
+                                        FontAttributes="Bold"
+                                        HorizontalTextAlignment="Center"
+                                    />
+                                    
+                                    <Label 
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Text="{Binding apellido}"
+                                        HorizontalTextAlignment="Center"
+                                    />
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        Text="Cédula"
+                                        FontSize="12"
+                                        FontAttributes="Bold"
+                                        HorizontalTextAlignment="Center"
+                                    />
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="2"
+                                        Text="{Binding cedula}"
+                                        HorizontalTextAlignment="Center"
+                                    />
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="3"
+                                        Text="Usuario"
+                                        FontSize="12"
+                                        FontAttributes="Bold"
+                                        HorizontalTextAlignment="Center"
+                                    />
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="3"
+                                        Text="{Binding user}"
+                                        HorizontalTextAlignment="Center"
+                                    />
+                                </Grid>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -145,4 +145,7 @@
       <Name>appclase</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fondo_login.jpg" />
+  </ItemGroup>
 </Project>
