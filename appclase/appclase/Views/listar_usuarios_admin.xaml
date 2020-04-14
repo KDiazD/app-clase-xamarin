@@ -11,6 +11,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Button Text="Crear un usuario" TextColor="White" BackgroundColor="#20BB82" Clicked="Button_Clicked"/>
+            <SearchBar
+                HeightRequest="30"
+                Placeholder="Search"
+                SearchCommand="{Binding SearchCommmand}"
+                Text="{Binding Filter}">
+            </SearchBar>
 
             <CollectionView x:Name="Listado_usuarios_admin" BackgroundColor="Black">
                 <CollectionView.ItemsLayout>

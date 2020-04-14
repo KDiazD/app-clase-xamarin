@@ -32,6 +32,9 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -49,25 +52,58 @@
                 <StackLayout Grid.Row="2" BackgroundColor="Black">
 
                     <Button
-                    Text="Usuarios"
-                    x:Name="usuarios"
-                    Clicked="usuarios_Clicked"
-                    BackgroundColor="Transparent"
-                    TextColor="White"
-                />
+                        Text="Usuarios"
+                        x:Name="usuarios"
+                        Clicked="usuarios_Clicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                    />
                 </StackLayout>
 
                 <StackLayout Grid.Row="3" BackgroundColor="Black">
 
                     <Button
-                    Text="Pedidos"
-                    x:Name="pedidos"
-                    Clicked="pedidos_Clicked"
-                    BackgroundColor="Transparent"
-                    TextColor="White"
-                />
+                        Text="Pedidos"
+                        x:Name="pedidos"
+                        Clicked="pedidos_Clicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                    />
                 </StackLayout>
+
                 <StackLayout Grid.Row="4" BackgroundColor="Black">
+
+                    <Button
+                        Text="Pedidos más vendidos"
+                        x:Name="pedidos_mas_vendidos"
+                        Clicked="pedidos_mas_vendidos_Clicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                    />
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" BackgroundColor="Black">
+                    
+                    <Button
+                        Text="Mayor compra por usuario"
+                        x:Name="usuarios_mayor_compra"
+                        Clicked="usuarios_mayor_compra_Clicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                    />
+                </StackLayout>
+
+                <StackLayout Grid.Row="6" BackgroundColor="Black">
+
+                    <Button
+                        Text="Usuarios sin compra"
+                        x:Name="usuarios_sin_compra"
+                        Clicked="usuarios_sin_compra_Clicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                    />
+                </StackLayout>
+                <StackLayout Grid.Row="7" BackgroundColor="Black">
                     
                 </StackLayout>
             </Grid>

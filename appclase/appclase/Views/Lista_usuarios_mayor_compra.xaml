@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="appclase.Views.Lista_usuarios_mayor_compra">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <CollectionView x:Name="listado_usuarios_mayor_compra">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="1"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <ContentView>
+                                <Frame HasShadow="True"
+                                       HorizontalOptions="StartAndExpand"
+                                       Margin="15,5"
+                                       HeightRequest="100"
+                                       WidthRequest="350"
+                                       Padding="10"
+                                       IsClippedToBounds="True">
+
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="160"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0"
+                                               Grid.Column="1"
+                                               HorizontalTextAlignment="Center"
+                                               FontSize="Large"
+                                               TextColor="Black"
+                                               VerticalTextAlignment="Center"
+                                               FontAttributes="Bold"
+                                               Text="{Binding nombre}">
+                                        </Label>
+                                        <Label Grid.Row="0"
+                                               Grid.Column="2"
+                                               TextColor="Black"
+                                               VerticalTextAlignment="Center"
+                                               FontSize="Medium"
+                                               Text="{Binding cantidad}">
+                                            
+                                        </Label>
+                                    </Grid>
+                                </Frame>
+                            </ContentView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

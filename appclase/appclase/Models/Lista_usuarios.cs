@@ -12,5 +12,7 @@ namespace appclase.Models
         public string apellido { get; set; }
         public int cedula { get; set; }
         public string user { get; set; }
+
+        public string Filter { get; set; }
     }
 }
