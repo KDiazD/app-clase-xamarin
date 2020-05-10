@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
              mc:Ignorable="d"
              x:Class="appclase.MainPage">
 
     <!-- Login-->
-    <Grid> 
+    <Grid BindingContext="{Binding Login}"> 
         <Image Source="fondo_login.jpg" Aspect="AspectFill"/>
         <BoxView Color="Black" Opacity="0.7"/>
 
@@ -50,6 +51,7 @@
                     x:Name="user"
                     PlaceholderColor="White"
                     Keyboard="Default"
+                    Text="{Binding Usuario}"
                 />
                 
                 <Entry
@@ -57,6 +59,7 @@
                     x:Name="pass"
                     PlaceholderColor="White"
                     Keyboard="Default"
+                    Text="{Binding Pass}"
                     
                 />
 
@@ -69,6 +72,7 @@
                     TextColor="White"
                     BorderWidth="2"
                     CornerRadius="9"
+                    Command="{Binding LoginCommand}"
                 />
             </StackLayout>
         </Grid>
